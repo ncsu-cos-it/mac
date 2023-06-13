@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "HostName:     "`hostname` > $HOME/Desktop/COS-INFO.txt
+echo "Tag:          "`/usr/local/bin/show-tag` >> $HOME/Desktop/COS-INFO.txt
+echo "IP Address:   "`/usr/local/bin/show-ip` >> $HOME/Desktop/COS-INFO.txt
