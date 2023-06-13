@@ -1,0 +1,17 @@
+#!/bin/bash
+BINDIR="/opt/cos/bin"
+CONFDIR="/opt/cos/etc"
+OS=`uname`
+case $OS in
+	Darwin)
+		/usr/sbin/ioreg -l | grep IOPlatformSerialNumber | cut -f4 -d'"'
+		/usr/sbin/ioreg -l | grep IOPlatformSerialNumber | cut -f4 -d'"'> $CONFDIR/SN.txt
+	;;
+	Linux)
+		if ! [ $LOGNAME = "root" ]; then
+                        echo "Need to be root"
+                else
+			dmidecode -s system-serial-numberyy
+		fi
+	;;
+esac	
