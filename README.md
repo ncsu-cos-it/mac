@@ -13,8 +13,11 @@
 </ol>
 
 ## Update 
-cd /opt/cos<br>
-git fetch<br>
-git merge<br>
+<ol>
+ <li>cd /opt/cos</li>
+ <li>git fetch</li>
+ <li>git merge</li>
+</ol>
+
 ## Contact
 <a href="mailto:group-sciences-rci@ncsu.edu">group-sciences-rci@ncsu.edu</a><br>
