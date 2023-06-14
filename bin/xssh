@@ -1,0 +1,65 @@
+#!/bin/sh
+CAMPUSID="tbyron"
+if [ $# -lt 1 ]
+then
+        echo 'xssh <host>'
+        exit 0
+fi
+
+if  [ -f ~/.ssh/config ]
+  then
+	CFGCHECK=`grep $1 ~/.ssh/config`
+	if [ "$CFGCHECK" != "" ]
+	  then
+		BGCOLOR="snow2"
+	        if [ $SUDO_USER ]
+	  	   then
+			echo "ERROR: sudo user will not work with ~/.ssh/config file".
+			exit 0
+	  	fi
+                xterm -T "$1-Config" -bg $BGCOLOR -fg black -name "$1-Config" -e ssh $1 &
+		exit 0
+	  fi
+  fi
+if [ $# -eq 2 ]
+  then
+	case "$2" in
+	   "vnc"|"VNC")
+		FORWARD="-L 5901:localhost:5900"
+		PORT=22
+	   ;;
+	   "smtp"|"SMTP")
+		FORWARD="-L 25:localhost:25"
+		PORT=22
+	   ;;
+	   *)   PORT=$2 ;;
+	esac
+  else
+	PORT=22
+fi
+CHECK=`echo $1 | grep @`
+if [ "$CHECK" = "" ]
+  then
+	BGCOLOR="lightyellow"
+	if [ "$USER" = "root" ] 
+	  then
+		RUSER=$CAMPUID
+	  else
+		RUSER=$USER
+	fi
+	RHOST=$1
+  else
+	BGCOLOR="lightblue"
+	RUSER=`echo $1 | awk -F"@" '{print $1}'`
+	RHOST=`echo $1 | awk -F"@" '{print $2}'`
+fi
+DNSCHECK=`/usr/bin/host $RHOST | grep "not found"`
+if [ "$DNSCHECK" = "" ]
+   then
+
+	# echo "xterm -T $RUSER@$RHOST -bg $BGCOLOR -fg black -name $RUSER@$RHOST -e ssh $FORWARD $RUSER@$RHOST -p $PORT"
+	xterm -T $RUSER@$RHOST -bg $BGCOLOR -fg black -name $RUSER@$RHOST -e ssh $FORWARD $RUSER@$RHOST -p $PORT 
+    else
+	    echo "ERROR: $RHOST not found..."
+    fi
+
