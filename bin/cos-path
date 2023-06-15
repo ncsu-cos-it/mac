@@ -52,7 +52,7 @@ case $SHELL in
        echo ' ' >> ~/.cshrc
        echo '## COS-IT' >> ~/.cshrc
        echo 'set PATH = ($PATH /opt/cos/bin)' >> ~/.cshrc
-       set PATH = ($PATH /opt/cos/bin)
+       set PATH = \($PATH /opt/cos/bin\)
      fi
      ;;
   "/bin/tcsh")
@@ -61,7 +61,7 @@ case $SHELL in
         echo ' ' >> ~/.cshrc
         echo '## COS-IT' >> ~/.cshrc
         echo 'set PATH = ($PATH:/opt/cos/bin)' >> ~/.cshrc
-        set PATH = ($PATH:/opt/cos/bin)
+        set PATH = \($PATH:/opt/cos/bin\)
      fi
      ;;
 esac
