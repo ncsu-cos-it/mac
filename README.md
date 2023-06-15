@@ -2,6 +2,7 @@
 ## Initial
 <ol>
  <li>Open "terminal"</li>
+ <li>xcode-select --install</li>
  <li>mkdir /opt</li>
  <li>cd /opt</li>
  <li>git clone https://github.com/ncsu-cos-it/mac cos<br>
