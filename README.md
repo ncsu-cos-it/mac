@@ -10,7 +10,7 @@
    <li>sudo chmod 775 /opt</li>
    </ul>
   (Repeat above steps 2-3)</li>
- <li>cd bin</li>
+ <li>cd cos/bin</li>
  <li>./cos-path</li>
  <li>./cos-info</li>
 </ol>
