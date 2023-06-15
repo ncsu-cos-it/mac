@@ -11,7 +11,7 @@
    <li>sudo chgrp staff /opt</li>
    <li>sudo chmod 775 /opt</li>
    </ul>
-  (Repeat above steps 2-3)</li>
+  (Repeat above steps 4-5)</li>
  <li>cd cos/bin</li>
  <li>./cos-path</li>
  <li>./cos-info</li>
