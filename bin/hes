@@ -53,7 +53,7 @@ case "$SYS" in
   ;;
   # Mac OS X 10.4 with gawk via homebrew
   Darwin)
-    AWK="/usr/local/bin/gawk"
+    AWK="/opt/homebrew/bin/gawk"
     DASHX="-x"
     EXPR="/bin/expr"
     LDAPSEARCH="/usr/bin/ldapsearch"
