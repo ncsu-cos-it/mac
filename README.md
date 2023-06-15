@@ -15,6 +15,7 @@
  <li>cd cos/bin</li>
  <li>./cos-path</li>
  <li>./cos-info</li>
+ <li>exit</li>
 </ol>
 
 ## Update 
