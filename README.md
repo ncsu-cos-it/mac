@@ -18,6 +18,7 @@
  <li>./cos-path</li>
  <li>./cos-info</li>
  <li>exit</li>
+ <li>{Click}[Red X - Top Left Corner]</li>
 </ol>
 
 ## Update 
@@ -29,6 +30,7 @@
  <li>git fetch</li>
  <li>git merge</li>
  <li>exit</li>
+ <li>{Click}[Red X - Top Left Corner]</li>
 </ol>
 
 ## Contact
