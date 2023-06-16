@@ -5,7 +5,10 @@
  <li>{Type}Terminal (Spotlight Search)</li>
  <li>{Click} Terminal (Black Icon)</li>
  <li>{Type in Terminal Window}</li>
- <li>xcode-select --install</li>
+ <li>xcode-select --install<br>
+   <ul>
+     <li>(Wait for pop-up window to complete install)</li>
+   </ul</li>
  <li>mkdir /opt</li>
  <li>cd /opt</li>
  <li>git clone https://github.com/ncsu-cos-it/mac cos<br>
