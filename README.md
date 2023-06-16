@@ -22,7 +22,9 @@
 
 ## Update 
 <ol>
- <li>Open "terminal"</li>
+ <li>{Press}&lt;command&gt;&lt;space-bar&gt;</li>
+ <li>{Type}Terminal</li>
+ <li>{Click} Terminal (Black Icon)</li>
  <li>cd /opt/cos</li>
  <li>git fetch</li>
  <li>git merge</li>
