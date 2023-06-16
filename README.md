@@ -2,8 +2,9 @@
 ## Initial Install
 <ol>
  <li>{Press}&lt;command&gt;&lt;space-bar&gt;</li>
- <li>{Type}Terminal</li>
+ <li>{Type}Terminal (Spotlight Search)</li>
  <li>{Click} Terminal (Black Icon)</li>
+ <li>{Type in Terminal Window}</li>
  <li>xcode-select --install</li>
  <li>mkdir /opt</li>
  <li>cd /opt</li>
@@ -18,19 +19,20 @@
  <li>./cos-path</li>
  <li>./cos-info</li>
  <li>exit</li>
- <li>{Click}[Red X - Top Left Corner]</li>
+ <li>{Click}[Red X - Top Left Corner of Terminal Window]</li>
 </ol>
 
 ## Update 
 <ol>
  <li>{Press}&lt;command&gt;&lt;space-bar&gt;</li>
- <li>{Type}Terminal</li>
+ <li>{Type}Terminal (Spotlight Search)</li>
  <li>{Click} Terminal (Black Icon)</li>
+ <li>{Type in Terminal Window}</li>
  <li>cd /opt/cos</li>
  <li>git fetch</li>
  <li>git merge</li>
  <li>exit</li>
- <li>{Click}[Red X - Top Left Corner]</li>
+ <li>{Click}[Red X - Top Left Corner of Terminal Window]</li>
 </ol>
 
 ## Contact
