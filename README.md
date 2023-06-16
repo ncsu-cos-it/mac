@@ -1,7 +1,9 @@
 # NC State University - COS IT
 ## Initial Install
 <ol>
- <li>Open "terminal"</li>
+ <li>{Press}&lt;command&gt;&lt;space-bar&gt;</li>
+ <li>{Type}Terminal</li>
+ <li>{Click} "Terminal" (Black Icon)</li>
  <li>xcode-select --install</li>
  <li>mkdir /opt</li>
  <li>cd /opt</li>
