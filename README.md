@@ -20,8 +20,9 @@
    </ul>
   (Repeat above steps 7-8)</li>
  <li>cd cos/bin</li>
- <li>./cos-path</li>
  <li>./cos-info</li>
+ <li>./cos-path</li>
+ <li>sudo ln -s /opt/cos/bin/cos-info /usr/local/bin/cos-info</li>
  <li>exit</li>
  <li>{Click}[Red X - Top Left Corner of Terminal Window]</li>
 </ol>
