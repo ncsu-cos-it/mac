@@ -1,17 +1,29 @@
 #!/bin/bash
+OS=`uname`
 BINDIR="/opt/cos/bin"
 CONFDIR="/opt/cos/etc"
-OS=`uname`
 case $OS in
 	Darwin)
-		/usr/sbin/ioreg -l | grep IOPlatformSerialNumber | cut -f4 -d'"'
-		/usr/sbin/ioreg -l | grep IOPlatformSerialNumber | cut -f4 -d'"'> $CONFDIR/SN.txt
+		if [ -f "$CONFDIR/SN.txt" ]; then
+		   cat $CONFDIR/SN.txt
+		   exit 0
+		else
+		   ioreg -l | grep IOPlatformSerialNumber | cut -f4 -d'"' > $CONFDIR/SN.txt
+		   chmod 644 $CONFDIR/SN.txt
+		   cat $CONFDIR/SN.txt
+		fi
 	;;
 	Linux)
+		if [ -f "$CONFDIR/SN.txt" ]; then
+		   cat $CONFDIR/SN.txt
+		   exit 0
+		fi
 		if ! [ $LOGNAME = "root" ]; then
                         echo "Need to be root"
                 else
-			dmidecode -s system-serial-numberyy
+			dmidecode -s system-serial-number
+			dmidecode -s system-serial-number > $CONFDIR/SN.txt
+			chmod 644 $CONFDIR/SN.txt
 		fi
 	;;
 esac	

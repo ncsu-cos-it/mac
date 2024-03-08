@@ -44,6 +44,7 @@ if [ -f "$CONFDIR/Tag.txt" ]
         Tag=`echo ${arrIN[3]} | cut -f2 -d: | sed -e 's/"//g'` 
         echo $Tag > $CONFDIR/Tag.txt
         echo $Tag
+	chmod 644 $CONFDIR/Tag.txt
      fi
      /bin/rm /tmp/$SN.txt
 fi
