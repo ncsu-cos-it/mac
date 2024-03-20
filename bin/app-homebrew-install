@@ -10,4 +10,5 @@ if [ "$CHECK" = "" ]; then
   brew install --cask visual-studio-code cyberduck zoom google-chrome google-drive firefox
 else
     brew update
+    brew upgrade
 fi
