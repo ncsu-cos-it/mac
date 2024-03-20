@@ -1,0 +1,21 @@
+Open a terminal
+=====================
+cd /opt/cos/sbin
+sudo ./modify-sudo
+sudo ./update-skel
+exit
+
+Re-Open a terminal
+=====================
+cd /opt/cos/bin
+./app-homebrew-install
+cd /opt/cos/info
+cat crontab.txt
+(Select all text and press <command><c>)
+crontab -e
+{Press}<command><v>
+  (Modify if Intel mac.)
+{Press}<ctrl><x>
+{Press}<y><Return>
+
+*** This will make the computer attempt to upgrade the apps installed by homebrew every four hours.
