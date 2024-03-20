@@ -27,3 +27,6 @@ shopt -s checkwinsize
 if [ -f ~/.bash_aliases ]; then
    . ~/.bash_aliases
 fi
+
+## COS-IT
+export PATH={$PATH}:/opt/cos/bin

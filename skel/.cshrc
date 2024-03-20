@@ -23,3 +23,6 @@ if  ( $?TERM ) then
         	exec /bin/zsh
 	endif
 endif
+
+## COS-IT
+set PATH = ($PATH /opt/cos/bin)

@@ -33,3 +33,6 @@ export PATH EDITOR
 if [ -f ~/.zsh_aliases ]; then
    . ~/.zsh_aliases
 fi
+
+## COS-IT
+export PATH={$PATH}:/opt/cos/bin
