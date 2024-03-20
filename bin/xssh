@@ -17,7 +17,7 @@ if  [ -f ~/.ssh/config ]
 			echo "ERROR: sudo user will not work with ~/.ssh/config file".
 			exit 0
 	  	fi
-                xterm -T "$1-Config" -bg $BGCOLOR -fg black -name "$1-Config" -e ssh $1 &
+                xterm -T "$1-Config" -bg $BGCOLOR -fg black -name "$1-Config" -e ssh -X $1 &
 		exit 0
 	  fi
   fi
@@ -57,8 +57,8 @@ DNSCHECK=`/usr/bin/host $RHOST | grep "not found"`
 if [ "$DNSCHECK" = "" ]
    then
 
-	# echo "xterm -T $RUSER@$RHOST -bg $BGCOLOR -fg black -name $RUSER@$RHOST -e ssh $FORWARD $RUSER@$RHOST -p $PORT"
-	xterm -T $RUSER@$RHOST -bg $BGCOLOR -fg black -name $RUSER@$RHOST -e ssh $FORWARD $RUSER@$RHOST -p $PORT 
+	# echo "xterm -T $RUSER@$RHOST -bg $BGCOLOR -fg black -name $RUSER@$RHOST -e ssh -X $FORWARD $RUSER@$RHOST -p $PORT"
+	xterm -T $RUSER@$RHOST -bg $BGCOLOR -fg black -name $RUSER@$RHOST -e ssh -X $FORWARD $RUSER@$RHOST -p $PORT 
     else
 	    echo "ERROR: $RHOST not found..."
     fi
