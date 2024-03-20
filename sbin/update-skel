@@ -1,0 +1,19 @@
+#!/bin/bash
+cd /opt/cos
+git fetch
+git merge
+cd /var/root
+echo " [ root/ ] "
+rsync -tlvz /opt/cos/skel/.??* .
+cd /Users
+for dir in */
+do
+     echo " [ $dir ] "
+     tuser=`echo $dir | cut -f1 -d/`
+     tgroup="ncsu"
+     cd $dir
+     rsync -tlvz /opt/cos/skel/.??* .
+     chown $tuser .??*  
+     chgrp $tgroup .??*  
+     cd /Users
+done
