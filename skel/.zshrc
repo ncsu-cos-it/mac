@@ -26,7 +26,8 @@ HISTFILESIZE=2000
 
 WHICHOS=`uname -a | grep x86_64`
 PATH=${PATH}:/opt/homebrew/bin:/opt/gfortran/bin
-export PATH
+EDITOR=nano
+export PATH EDITOR
 
 ## Modified to Follow Default Ubuntu .zshrc
 if [ -f ~/.zsh_aliases ]; then
