@@ -25,7 +25,10 @@ HISTFILESIZE=2000
 # shopt -s checkwinsize
 
 WHICHOS=`uname -a | grep x86_64`
-PATH=${PATH}:/opt/homebrew/bin:/opt/gfortran/bin
+if [ -z $WHICHOS ]; then
+  PATH=${PATH}:/opt/homebrew/bin:/opt/gfortran/bin
+  echo "M Processor"
+fi
 EDITOR=nano
 export PATH EDITOR
 
@@ -35,4 +38,4 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 ## COS-IT
-export PATH={$PATH}:/opt/cos/bin
+export PATH=${PATH}:/opt/cos/bin
