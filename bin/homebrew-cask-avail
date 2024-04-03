@@ -1,0 +1,3 @@
+#!/bin/sh
+export HOMEBREW_EVAL_ALL=1
+brew search --cask --desc ''
