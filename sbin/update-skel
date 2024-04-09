@@ -11,7 +11,7 @@ cd /var/root
 echo " [ root/ ] "
 rsync -tlvz /opt/cos/skel/.??* .
 cd /Users
-dirlist=`ls -1 | grep -v Shared`
+dirlist=`ls -1 | grep -v Shared | grep -v .localized`
 for dir in $dirlist
 do
      echo " [ $dir ] "
