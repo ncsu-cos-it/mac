@@ -18,7 +18,7 @@ do
      tuser=`echo $dir | cut -f1 -d/`
      tgroup="ncsu"
      cd $dir
-     rsync -tlvz /opt/cos/skel/.??* .
+     rsync -tlvz --exclude /opt/cos/skel/.ssh/known_hosts /opt/cos/skel/.??* .
      chown $tuser .??*  
      chgrp $tgroup .??*  
      cd /Users
