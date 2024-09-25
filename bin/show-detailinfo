@@ -1,2 +1,4 @@
 #!/bin/sh
 system_profiler SPSoftwareDataType SPHardwareDataType
+# sw_vers
+# sw_vers -productVersion
