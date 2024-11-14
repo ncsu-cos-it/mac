@@ -23,5 +23,5 @@ if [ -d $localPath ]
 	 mkdir /usr/local/sbin
     fi
 fi
-ln -s /opt/cos/bin/* /usr/local/bin/
-ln -s /opt/cos/sbin/* /usr/local/sbin/
+ln -f -s /opt/cos/bin/* /usr/local/bin/
+ln -f -s /opt/cos/sbin/* /usr/local/sbin/
