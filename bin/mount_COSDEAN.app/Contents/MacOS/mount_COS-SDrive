@@ -1,0 +1,16 @@
+#!/bin/sh
+# If special characters exist in the password
+# then you must use the HEX value for the character
+# Example: p@ss would be p%40ss
+UNITYID=$USER
+# UNITYPASS="p%40ss"
+DOMAIN="WOLFTECH"
+DIRECTORY="/Volumes/COSDEAN"
+if [ -d "$DIRECTORY" ]; then
+        # if [ -d "$DIRECTORY/Documents" ]; then
+        #      exit 0;
+        #fi
+        /usr/bin/osascript -e "try" -e "mount volume \"smb://${UNITYID}@wolftech.ad.ncsu.edu/oit/shares/COSDEAN\"" -e "end try"
+else
+        /usr/bin/osascript -e "try" -e "mount volume \"smb://${UNITYID}@wolftech.ad.ncsu.edu/oit/shares/COSDEAN\"" -e "end try"
+fi
