@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the repository URL and local path
-repoUrl="https://github.com/ncsu-cos-it/win"
+repoUrl="https://github.com/ncsu-cos-it/mac"
 localPath="/opt/cos"
 
 # Check if the local repository exists
@@ -18,10 +18,10 @@ if [ -d $localPath ]
     chmod -R 775 /opt/cos/etc
     chmod g+s /opt/cos/etc
     chgrp -R staff /opt/cos
-    ln -s /opt/cos/bin/* /usr/local/bin/
     if [ -d "/usr/local/sbin" ] 
       then
 	 mkdir /usr/local/sbin
     fi
-    ln -s /opt/cos/sbin/* /usr/local/sbin/
 fi
+ln -s /opt/cos/bin/* /usr/local/bin/
+ln -s /opt/cos/sbin/* /usr/local/sbin/
