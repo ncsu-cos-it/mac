@@ -5,3 +5,4 @@
 # Intel
 #01      */4        *      *     *    "/usr/local/bin/brew upgrade" > /dev/null 2>&1
 
+51      */2        *     *     *    '/usr/bin/sudo /usr/local/sbin/cos-update' > /dev/null 2>&1
