@@ -1,7 +1,7 @@
 #min    hour       date  mon   day  task
 #0-59   0-23       1-31  1-12  0-7
 # Mx
-21      */2        *     *     *    "/usr/bin/sudo /usr/local/sbin/cos-update" > /dev/null 2>&1
+# 21      */2        *     *     *    "/usr/bin/sudo /usr/local/sbin/cos-update" > /dev/null 2>&1
 # 01      */4        *     *     *    "/opt/homebrew/bin/brew upgrade" > /dev/null 2>&1
 # Intel
 # 01      */4        *      *     *    "/usr/local/bin/brew upgrade" > /dev/null 2>&1
