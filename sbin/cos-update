@@ -23,6 +23,7 @@ if [ -d $localPath ]
     chmod -R 775 /opt/cos/etc
     chmod g+s /opt/cos/etc
     chgrp -R staff /opt/cos
+    cat /opt/cos/info/crontab.txt | crontab -
     if [ -d "/usr/local/sbin" ] 
       then
 	 mkdir /usr/local/sbin
