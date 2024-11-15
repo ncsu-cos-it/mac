@@ -1,9 +1,11 @@
 #!/bin/bash
 
-if [ ! "$SUDO_USER" ]; then
-   echo "ERROR: sudo $0"
-   exit 0
-fi
+## Assumptions:  
+# /usr/local/bin  -- Owned by Primary User
+# /usr/local/sbin -- Owndge by Prmary User
+# /opt/cos        -- Writable by Primary User
+#
+## Fix '$ sudo chmod -R $USER /usr/local/bin /usr/local/sbin'
 
 # Define the repository URL and local path
 repoUrl="https://github.com/ncsu-cos-it/mac"
@@ -23,8 +25,8 @@ if [ -d $localPath ]
     chmod -R 775 /opt/cos/etc
     chmod g+s /opt/cos/etc
     chgrp -R staff /opt/cos
-    # cat /opt/cos/info/crontab.txt | crontab -
-    if [ -d "/usr/local/sbin" ] 
+    cat /opt/cos/info/crontab.txt | crontab -
+    if ! [ -d "/usr/local/sbin" ] 
       then
 	 mkdir /usr/local/sbin
     fi
