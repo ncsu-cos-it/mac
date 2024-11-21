@@ -7,17 +7,10 @@ UNITYID=$USER
 DOMAIN="WOLFTECH"
 DIRECTORY="/Volumes/COSDEAN"
 if [ -d "$DIRECTORY" ]; then
-        #if [ -d "$DIRECTORY/Documents" ]; then
-        #      echo "$DIRECTORY already mounted"
-              #exit 0;
+        # if [ -d "$DIRECTORY/Documents" ]; then
+        #      exit 0;
         #fi
-        echo "mounting $DIRECTORY"
-        # mount -t smbfs //$DOMAIN\;$UNITYID:$UNITYPASS@ncsudrive.ncsu.edu/home $DIRECTORY
-        mount -t smbfs //$DOMAIN\;$UNITYID@wolftech.ad.ncsu.edu/oit/shares/COSDEAN $DIRECTORY
+        /usr/bin/osascript -e "try" -e "mount volume \"smb://${UNITYID}@wolftech.ad.ncsu.edu/oit/shares/COSDEAN\"" -e "end try"
 else
-        sudo mkdir $DIRECTORY
-        sudo chown $UNITYID $DIRECTORY
-        echo "mounting $DIRECTORY"
-        # mount -t smbfs //$DOMAIN\;$UNITYID:$UNITYPASS@ncsudrive.ncsu.edu/home  $DIRECTORY
-        mount -t smbfs //$DOMAIN\;$UNITYID@wolftech.ad.ncsu.edu/oit/shares/COSDEAN $DIRECTORY
+        /usr/bin/osascript -e "try" -e "mount volume \"smb://${UNITYID}@wolftech.ad.ncsu.edu/oit/shares/COSDEAN\"" -e "end try"
 fi
