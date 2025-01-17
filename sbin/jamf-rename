@@ -1,2 +1,2 @@
 #!/bin/sh
-jamf setComputerName -useSerialNumber -prefix 'COS-DEAN-IT'
+jamf setComputerName -useSerialNumber -prefix 'COS-DEAN-IT-'
