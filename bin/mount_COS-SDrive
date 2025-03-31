@@ -5,12 +5,12 @@
 UNITYID=$USER
 # UNITYPASS="p%40ss"
 DOMAIN="WOLFTECH"
-DIRECTORY="/Volumes/COSDEAN"
+DIRECTORY="/Volumes/dean"
 if [ -d "$DIRECTORY" ]; then
         # if [ -d "$DIRECTORY/Documents" ]; then
         #      exit 0;
         #fi
-        /usr/bin/osascript -e "try" -e "mount volume \"smb://${UNITYID}@wolftech.ad.ncsu.edu/oit/shares/COSDEAN\"" -e "end try"
+        /usr/bin/osascript -e "try" -e "mount volume \"smb://${UNITYID}@ncsudrive.ncsu.edu/cos/administrative/dean\"" -e "end try"
 else
-        /usr/bin/osascript -e "try" -e "mount volume \"smb://${UNITYID}@wolftech.ad.ncsu.edu/oit/shares/COSDEAN\"" -e "end try"
+        /usr/bin/osascript -e "try" -e "mount volume \"smb://${UNITYID}@ncsudrive.ncsu.edu/cos/administrative/dean\"" -e "end try"
 fi
