@@ -1,0 +1,16 @@
+#!/bin/sh
+# Take a number in HEX format and convert it to Decimal.
+#
+if [ $# -lt 1 ]
+then
+	echo "$0 {hex}"
+	exit 0
+fi
+if [ $# -eq 2 ]
+then
+	hex=$1$2
+else
+	hex=$1
+fi
+let value=0x$hex
+echo $((value))
