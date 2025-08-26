@@ -1,0 +1,13 @@
+#!/bin/bash
+
+CURRENT_USER=$(stat -f "%Su" /dev/console)
+SHARE="smb://ncsudrive.ncsu.edu/cos"
+
+if [ "$CURRENT_USER" == "root" ] || [ -z "$CURRENT_USER" ]; then
+    echo "No logged-in user detected. Exiting."
+    exit 1
+fi
+
+# Use "open" to trigger Finder's mount behavior with Keychain support
+launchctl asuser "$(id -u "$CURRENT_USER")" sudo -u "$CURRENT_USER" \
+    open "$SHARE"
