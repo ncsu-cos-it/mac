@@ -16,7 +16,7 @@ for dir in $dirlist
 do
      echo " [ $dir ] "
      tuser=`echo $dir | cut -f1 -d/`
-     tgroup="ncsu"
+     tgroup="staff"
      cd $dir
      rsync -tlvz --exclude /opt/cos/skel/.ssh/authorized_keys /opt/cos/skel/.??* .
      if [ -f .ssh/authorized_keys ]; then
