@@ -10,21 +10,13 @@
      <li>(Wait for pop-up window to complete install)</li>
    </ul>
 </li>
+ <li>sudo -s</li>
  <li>mkdir /opt</li>
  <li>cd /opt</li>
  <li>git clone https://github.com/ncsu-cos-it/mac cos<br>
- (If permission denied)<br>
-   <ul>
-   <li>sudo chgrp staff /opt</li>
-   <li>sudo chmod 775 /opt</li>
-   </ul>
-  (Repeat above steps 7-8)</li>
- <li>cd cos/bin</li>
- <li>./cos-info</li>
- <li>./cos-path</li>
- <li>sudo ln -s /opt/cos/bin/cos-info /usr/local/bin/cos-info</li>
+ <li>cd cos/sbin</li>
+ <li>./cos-config</li>
  <li>exit</li>
- <li>{Click}[Red X - Top Left Corner of Terminal Window]</li>
 </ol>
 
 ## Update 
@@ -34,10 +26,8 @@
  <li>{Click} Terminal (Black Icon)</li>
  <li>{Type in Terminal Window}</li>
  <li>cd /opt/cos</li>
- <li>git fetch</li>
- <li>git merge</li>
+ <li>git pull</li>
  <li>exit</li>
- <li>{Click}[Red X - Top Left Corner of Terminal Window]</li>
 </ol>
 
 ## Contact
