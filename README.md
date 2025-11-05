@@ -19,6 +19,19 @@
  <li>exit</li>
 </ol>
 
+## Manual Config SN/TAG
+ <ol>
+ <li>{Press}&lt;command&gt;&lt;space-bar&gt;</li>
+ <li>{Type}Terminal (Spotlight Search)</li>
+ <li>{Click} Terminal (Black Icon)</li>
+ <li>{Type in Terminal Window}</li>
+ <li>cd /opt/cos/etc</li>.
+ <li>open SN.txt<br>
+  (Type whatever seriall number you have for computer)</li>
+ <li>open TAG.txt<br>
+   (Type whatever asset tag you have for computer)</li>
+ </ol>
+
 ## Update 
 <ol>
  <li>{Press}&lt;command&gt;&lt;space-bar&gt;</li>
