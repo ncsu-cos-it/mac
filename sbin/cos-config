@@ -1,0 +1,14 @@
+#!/bin/sh
+cd /opt
+chown -R staff cos
+chmod -R 775 cos/etc
+chmod g+s cos/etc
+cd /usr/local/bin
+ln -s /opt/cos/bin/* .
+mkdir -p /usr/local/sbin
+cd /usr/local/sbin
+ln -s /opt/cos/sbin/* .
+cd
+show-sn
+show-model
+show-tag
