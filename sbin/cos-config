@@ -1,6 +1,6 @@
 #!/bin/sh
 cd /opt
-chown -R staff cos
+chgrp -R staff cos
 chmod -R 775 cos/etc
 chmod g+s cos/etc
 cd /usr/local/bin
