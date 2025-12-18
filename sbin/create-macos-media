@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Modify the command below to relate to your mounted USB media"
+echo "------------------------------------------------------------"
+echo "sudo /Applications/Install\ macOS\ Tahoe.app/Contents/Resources/createinstallmedia --volume /Volumes/USB-Drive"
