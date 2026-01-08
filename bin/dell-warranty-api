@@ -45,8 +45,9 @@ do
           --header "Authorization: Bearer $ACCESS" \
           --header "accept: application/json" `
    # echo $RESULT
-   MODEL=`echo -n $RESULT | cut -f11 -d: | cut -f1 -d, | sed -e 's/"//g'`
-   STARTDATE=`echo -n $RESULT | cut -f20 -d: | cut -f1 -d"T" | sed -e 's/"//g'`
-   ENDDATE=`echo  $RESULT | cut -f23 -d: | cut -f1 -d"T" | sed -e 's/"//g'`
+   MODEL=`echo -n $RESULT | cut -f67 -d: | cut -f1 -d, | sed -e 's/"//g'`
+   MODEL=`echo $MODEL | sed -e 's/ /_/g'`
+   STARTDATE=`echo -n $RESULT | cut -f17 -d: | cut -f1 -d"T" | sed -e 's/"//g'`
+   ENDDATE=`echo  $RESULT | cut -f20 -d: | cut -f1 -d"T" | sed -e 's/"//g'`
    echo "$SN,$MODEL,$STARTDATE,$ENDDATE"
 done
