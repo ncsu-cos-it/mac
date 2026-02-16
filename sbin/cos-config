@@ -12,3 +12,13 @@ cd
 show-sn
 show-model
 show-tag
+if [ "$SUDO_USER" == "cosadm" ]
+  then
+     echo "cosadm"
+     # cat /opt/cos/info/crontab.txt | crontab -
+  else
+     echo "NOT cosadm"
+     chown -R $SUDO_USER:staff /opt/cos
+     chown -R $SUDO_USER:staff /usr/local/bin
+     chown -R $SUDO_USER:staff /usr/local/sbin
+fi
