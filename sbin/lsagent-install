@@ -1,0 +1,6 @@
+# Download and install LsAgent silently
+cd /tmp
+curl -L "https://content.lansweeper.com/l/651653/2018-11-27/4d6yl" -o /tmp/LsAgent-osx.dmg
+hdiutil attach /tmp/LsAgent-osx.dmg -nobrowse
+sudo /Volumes/LsAgent/LsAgent-osx.app/Contents/MacOS/installbuilder.sh --mode unattended --server nayaug.cos.ncsu.edu --agentkey "fceafb7e-0bb7-48e9-b27d-ff8d84de8ab8"
+hdiutil detach /Volumes/LsAgent
