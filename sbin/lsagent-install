@@ -10,7 +10,6 @@ if [ -f "/Applications/LansweeperAgent/LSAgent" ]; then
    # echo Already Installed
    exit 0
 fi
-exit 0
 cd /tmp
 curl -L "https://content.lansweeper.com/l/651653/2018-11-27/4d6yl" -o /tmp/LsAgent-osx.dmg
 hdiutil attach /tmp/LsAgent-osx.dmg -nobrowse
