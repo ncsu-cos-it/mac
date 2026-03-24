@@ -2,12 +2,12 @@
 #
 # Check if user is root
 if [ ! "$(id -u)" -eq 0 ]; then
-   echo sudo required
+   # echo sudo required
    exit 0
 fi
 # Check if already installed
 if [ -f "/Applications/LansweeperAgent/LSAgent" ]; then
-   echo Already Installed
+   # echo Already Installed
    exit 0
 fi
 exit 0

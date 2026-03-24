@@ -33,3 +33,6 @@ if [ -d $localPath ]
 fi
 ln -f -s /opt/cos/bin/* /usr/local/bin/
 ln -f -s /opt/cos/sbin/* /usr/local/sbin/
+
+## Adding LS-Agent Install 03-24-2026
+/opt/cos/sbin/lsagent-install
