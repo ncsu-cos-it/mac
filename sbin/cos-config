@@ -9,6 +9,7 @@ mkdir -p /usr/local/sbin
 cd /usr/local/sbin
 ln -s /opt/cos/sbin/* .
 cd
+lsagent-install
 show-sn
 show-model
 show-tag
