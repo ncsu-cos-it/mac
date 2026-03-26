@@ -9,10 +9,10 @@ mkdir -p /usr/local/sbin
 cd /usr/local/sbin
 ln -s /opt/cos/sbin/* .
 cd
-lsagent-install
-show-sn
-show-model
-show-tag
+/opt/cos/sbin/lsagent-install
+/opt/cos/bin/show-sn
+/opt/cos/bin/show-model
+/opt/cos/bin/show-tag
 if [ "$SUDO_USER" == "cosadm" ]
   then
      cat /opt/cos/info/crontab.txt | crontab -
