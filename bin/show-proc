@@ -4,13 +4,16 @@ BINDIR="/opt/cos/bin"
 CONFDIR="/opt/cos/etc"
 case $OS in
 	Darwin)
-		if [ -f "$CONFDIR/MODEL.txt" ]; then
-		   cat $CONFDIR/MODEL.txt
+		if [ -f "$CONFDIR/PROC.txt" ]; then
+		   cat $CONFDIR/PROC.txt
 		   exit 0
 		else
-		   system_profiler SPHardwareDataType | grep Identifier | awk '{print $3}'  > $CONFDIR/MODEL.txt
-		   chmod 644 $CONFDIR/MODEL.txt
-		   cat $CONFDIR/MODEL.txt
+		   # system_profiler SPHardwareDataType | grep Identifier | awk '{print $3}'  > $CONFDIR/MODEL.txt
+		   PROC2=`system_profiler SPHardwareDataType | grep Chip | cut -f2 -d: | sed -e 's/ /_/g'` 
+		   PROC=`echo "${PROC2:1}"`
+		   echo $MODEL > $CONFDIR/PROC.txt
+		   chmod 644 $CONFDIR/PROC.txt
+		   cat $CONFDIR/PROC.txt
 		fi
 	;;
 	Linux)
