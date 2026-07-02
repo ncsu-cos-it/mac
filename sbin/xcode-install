@@ -1,0 +1,32 @@
+# Install XCode-Select Silently
+# Source: https://developer.apple.com/forums/thread/698954
+#
+# Check if user is root
+if [ ! "$(id -u)" -eq 0 ]; then
+   # echo sudo required
+   exit 0
+fi
+
+# echo "Checking Command Line Tools for Xcode"
+# Only run if the tools are not installed yet
+# To check that try to print the SDK path
+xcode-select -p &> /dev/null
+if [ $? -ne 0 ]; then
+   # 1. Create a temporary touch file to trick softwareupdate into listing developer tools
+   touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+
+   # 2. Find the exact name of the latest Command Line Tools matching your macOS version
+   PROD=$(softwareupdate -l | grep "\*.*Command Line Tools" | tail -n 1 | awk -F"*" '{print $2}' | sed -e 's/^ *//' | tr -d '\n')
+
+   # 3. Silently install the package using the extracted product identifier
+   if [ -n "$PROD" ]; then
+       sudo softwareupdate -i "$PROD" --verbose
+   else
+       echo "No Command Line Tools update found in the softwareupdate feed."
+   fi
+
+   # 4. Clean up the temporary touch file
+   sudo rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+else
+  echo "Command Line Tools for Xcode have already been installed."
+fi 

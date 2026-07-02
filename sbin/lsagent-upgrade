@@ -7,8 +7,8 @@ if [ ! "$(id -u)" -eq 0 ]; then
 fi
 # Check if already installed
 if [ -f "/Applications/LansweeperAgent/LSAgent" ]; then
-   # echo Already Installed
-   exit 0
+   echo Already Installed
+   # exit 0
 fi
 cd /tmp
 curl -L "https://www4.stat.ncsu.edu/lsagent/LsAgent-osx.dmg" -o /tmp/LsAgent-osx.dmg
