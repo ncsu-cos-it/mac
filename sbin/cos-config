@@ -12,6 +12,7 @@ cd
 /opt/cos/sbin/lsagent-install
 /opt/cos/bin/show-sn
 /opt/cos/bin/show-model
+/opt/cos/bin/show-proc
 /opt/cos/bin/show-tag
 if [ "$SUDO_USER" == "cosadm" ]
   then
