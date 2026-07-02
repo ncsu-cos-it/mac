@@ -11,7 +11,7 @@ case $OS in
 		   # system_profiler SPHardwareDataType | grep Identifier | awk '{print $3}'  > $CONFDIR/MODEL.txt
 		   PROC2=`system_profiler SPHardwareDataType | grep Chip | cut -f2 -d: | sed -e 's/ /_/g'` 
 		   PROC=`echo "${PROC2:1}"`
-		   echo $MODEL > $CONFDIR/PROC.txt
+		   echo $PROC > $CONFDIR/PROC.txt
 		   chmod 644 $CONFDIR/PROC.txt
 		   cat $CONFDIR/PROC.txt
 		fi
