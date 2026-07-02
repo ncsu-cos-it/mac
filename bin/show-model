@@ -8,7 +8,8 @@ case $OS in
 		   cat $CONFDIR/MODEL.txt
 		   exit 0
 		else
-		   system_profiler SPHardwareDataType | grep Identifier | awk '{print $3}'  > $CONFDIR/MODEL.txt
+		   # system_profiler SPHardwareDataType | grep Identifier | awk '{print $3}'  > $CONFDIR/MODEL.txt
+		   system_profiler SPHardwareDataType | grep Chip | awk '{print $3}'  > $CONFDIR/MODEL.txt
 		   chmod 644 $CONFDIR/MODEL.txt
 		   cat $CONFDIR/MODEL.txt
 		fi
