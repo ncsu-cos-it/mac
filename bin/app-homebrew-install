@@ -6,7 +6,7 @@ fi
 CHECK=`which wget`
 if [ "$CHECK" = "" ]; then 
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  /opt/homebrew/bin/brew install gawk wget htop tmux
+  /opt/homebrew/bin/brew install gawk wget htop tmux rsync
   /opt/homebrew/bin/brew install --cask visual-studio-code cyberduck zoom google-chrome google-drive firefox
 else
     brew update
