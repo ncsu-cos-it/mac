@@ -15,8 +15,17 @@ case $OSNum in
 	"14")
 		OSName="Sonoma"
 		;;
+	"13")
+		OSName="Ventura (Unsupported)"
+		;;
+	"12")
+		OSName="Monterey (Unsupported)"
+		;;
+	"11")
+		OSName="Big Sur (Unsupported)"
+		;;
 	*)
-		OSName="Unsupported"
+		OSName="(Unsupported)"
 		;;
 esac
 		
