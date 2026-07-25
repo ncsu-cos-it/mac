@@ -1,4 +1,23 @@
 #!/bin/bash
 ProductName=`sw_vers -ProductName`
 ProductVersion=`sw_vers -ProductVersion`
-echo $ProductName $ProductVersion
+OSNum=`echo $ProductVersion | cut -f1 -d.`
+case $OSNum in 
+	"27")
+		OSName="Golden Gate"
+		;;
+	"26")
+		OSName="Tahoe"
+		;;
+	"15")
+		OSName="Sequois"
+		;;
+	"14")
+		OSName="Sonoma"
+		;;
+	*)
+		OSName="Unsupported"
+		;;
+esac
+		
+echo $OSName - $ProductName $ProductVersion 
