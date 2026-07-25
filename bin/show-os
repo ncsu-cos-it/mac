@@ -1,0 +1,4 @@
+#!/bin/bash
+ProductName=`sw_vers -ProductName`
+ProductVersion=`sw_vers -ProductVersion`
+echo $ProductName $ProductVersion
