@@ -1,0 +1,7 @@
+#!/bin/sh
+softwareupdate --list
+
+echo "softwareupate --install <Label>"
+echo "softwareupdate -ia && reboot"
+
+echo "echo "$4" | sudo -u root softwareupdate --install --all --restart --force --no-scan --agree-to-license --user "$5" --stdinpass"

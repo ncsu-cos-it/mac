@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Check if user is root
+if [ ! "$(id -u)" -eq 0 ]; then
+   echo sudo required
+   exit 0
+fi
+if [ $# -lt 1 ]
+then
+        echo "$0 {userid}"
+        exit 0
+fi
+
+targetUser=$1
+tokenOutput=$(sysadminctl -secureTokenStatus "$targetUser" 2>&1)
+
+if echo "$tokenOutput" | grep -q "ENABLED"; then
+    tokenStatus="ENABLED"
+elif echo "$tokenOutput" | grep -q "DISABLED"; then
+    tokenStatus="DISABLED"
+else
+    tokenStatus="UNKNOWN"
+fi
+
+#if [ $tokenStatus = "ENABLED" ]; then
+#	echo "$targetUser skipped SecureToken"
+#	exit 0
+#fi
+echo Deleting User [ $1 ]
+sysadminctl -deleteUser $1
+
