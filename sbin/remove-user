@@ -26,6 +26,7 @@ fi
 #	echo "$targetUser skipped SecureToken"
 #	exit 0
 #fi
-echo Deleting User [ $1 ]
+echo -e "Deleting User \033[0;31m [ $1 ] \033[0m"
+sleep 5
 sysadminctl -deleteUser $1
 

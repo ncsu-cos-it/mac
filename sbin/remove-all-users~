@@ -10,7 +10,6 @@ cd /Users
 Users=`ls -1 | grep -v $SUDO_USER | grep -v .localized | grep -v Shared | grep -v cos`
 for a in ${Users}
 do
-	echo -e "Deleting User \033[0;31m [ $a ] \033[0m"
-	sleep 5
+	echo Deleting User [ $a ]
 	sysadminctl -deleteUser $a
 done    
