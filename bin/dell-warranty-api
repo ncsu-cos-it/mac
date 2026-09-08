@@ -2,7 +2,7 @@
 # https://www.dell.com/en-us/lp/dt/tech-direct
 # https://tdm.dell.com/dashboard?lang=en_US
 # APIs
-# COS Snipe Api_2025_06_02 (Expires 06/02/2026)
+# SNIPE Api_2025_06_02 (Expires 01/06/2027)
 #
 if [ $# -lt 1 ]; then
 	echo ERROR: $0 {Dell ServiceTag}
@@ -30,8 +30,10 @@ access_token_url="https://apigtwb2c.us.dell.com/auth/oauth/v2/token"
 grant_type="client_credentials"
 # client_id="l7e0e01c38206545e68ef9b72ae8e32726"
 # client_secret="6d178ca9b7bf46fb844347bd317b1e57"
-client_id="l7e9dce9695b0046c1a2f17096a1a89487"
-client_secret="1f94e1858b324ed3bf5c2dbf6052c6a6"
+# client_id="l7e9dce9695b0046c1a2f17096a1a89487"
+# client_secret="1f94e1858b324ed3bf5c2dbf6052c6a6"
+client_id="d85b9dce-3f4d-4e84-9d95-efd606dfa334"
+client_secret="146ab46662c940bcb162d948b30f7618"
 
 RESULT=`curl -s --request POST \
 	--url "$access_token_url" \
