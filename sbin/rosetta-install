@@ -1,0 +1,8 @@
+# Download and install LsAgent silently
+#
+# Check if user is root
+if [ ! "$(id -u)" -eq 0 ]; then
+   # echo sudo required
+   exit 0
+fi
+softwareupdate --install-rosetta --agree-to-license
