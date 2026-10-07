@@ -1,2 +1,0 @@
-#!/bin/bash
- sysadminctl -secureTokenOn cosadm -password - -adminUser $USER -adminPassword -
