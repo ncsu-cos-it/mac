@@ -4,9 +4,8 @@ if [ ! "$(id -u)" -eq 0 ]; then
    echo sudo required
    exit 0
 fi
-if [ $# -lt 1 ]
-then
-        echo "$0 {userid}"
-        exit 0
-fi
-sysadminctl -secureTokenStatus $1
+USERS=`ls -1 /Users/ | grep -v .local | grep -v Shared`
+for a in $USERS;  do
+	echo -n "[ $a ] "
+        sysadminctl -secureTokenStatus $a
+done
