@@ -29,4 +29,4 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 ## COS-IT
-export PATH={$PATH}:/opt/cos/bin
+export PATH=/opt/homebrew/bin:/opt/cos/bin:${PATH}

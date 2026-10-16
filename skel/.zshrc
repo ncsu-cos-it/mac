@@ -26,7 +26,7 @@ HISTFILESIZE=2000
 
 WHICHOS=`uname -a | grep x86_64`
 if [ -z $WHICHOS ]; then
-  PATH=${PATH}:/opt/homebrew/bin:/opt/gfortran/bin
+  PATH=/opt/homebrew/bin:/opt/gfortran/bin:/opt/cos/bin:${PATH}
 fi
 EDITOR=nano
 export PATH EDITOR
