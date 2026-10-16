@@ -1,3 +1,5 @@
-REMOTE_HOSTNAME="server.physics.ncsu.edu"
+#!/bin/bash
+REMOTE_HOSTNAME="DEPT-SN.cos.ncsu.edu"
 echo $REMOTE_HOSTNAME
-echo "rsync -e ssh -rltvzpog –iconv=utf-8-mac,utf-8-mac Documents $USER@$REMOTE_HOSTNAME:"
+echo "cd /Users"
+echo "/opt/hombrew/bin/rsync -e ssh -rltvzpog $USER@$REMOTE_HOSTNAME:/Users/$USER --exclude $USER/Library --exclude $USER/.Trash ."
