@@ -1,0 +1,21 @@
+#!/bin/zsh
+# Check if user is root
+if [ ! "$(id -u)" -eq 0 ]; then
+   echo sudo required
+   exit 0
+fi
+ 
+# https://medium.com/@laclementine
+
+# Enable SSID visibility (required for modern macOS privacy restrictions)
+ipconfig sethidewifiinfo 0
+
+# Get the Wi-Fi interface name (e.g., en0)
+WIFI_INT=$(networksetup -listallhardwareports | awk '/Hardware Port: Wi-Fi/{getline; print $2}')
+
+# Read SSID
+CURRENT_SSID=$(ipconfig getsummary "$WIFI_INT" | awk -F ' SSID : ' '/ SSID : / {print $2}')
+
+# Send result to Jamf
+echo "$CURRENT_SSID"
+exit 0
