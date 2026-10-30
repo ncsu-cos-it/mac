@@ -2,4 +2,4 @@
 REMOTE_HOSTNAME="DEPT-SN.cos.ncsu.edu"
 echo $REMOTE_HOSTNAME
 echo "cd /Users"
-echo "/opt/hombrew/bin/rsync -e ssh -rltvzpog $USER@$REMOTE_HOSTNAME:/Users/$USER --exclude $USER/Library --exclude $USER/.Trash ."
+echo "/opt/homebrew/bin/rsync -e ssh -rltvzpog $USER@$REMOTE_HOSTNAME:/Users/$USER --exclude $USER/Library --exclude $USER/.Trash ."
