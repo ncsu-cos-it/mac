@@ -13,9 +13,7 @@
  <li>sudo -s</li>
  <li>mkdir /opt</li>
  <li>cd /opt</li>
- <li>git clone https://github.com/ncsu-cos-it/mac cos<br>
- <li>cd cos/sbin</li>
- <li>./cos-config</li>
+ <li>git clone https://github.com/ncsu-cos-it/mac cos; cos/sbin/cos-config<br>
  <li>exit</li>
 </ol>
 
